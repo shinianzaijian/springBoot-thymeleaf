@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>修改用户</title>
+</head>
+<body>
+
+    <form action="/information" method="post"><br>
+        id:<input type="text" value="${id}" readonly>
+        用户名:<input type="text" name="username"><br>
+        &nbsp;&nbsp;&nbsp;性别:<input type="text" name="sex"><br>
+        &nbsp;&nbsp;&nbsp;生日:<input type="date" name="birthday" value="<fmt:formatDate value="${birthday}><br>
+        &nbsp;&nbsp;&nbsp;地址:<input type="text" name="address"><br>
+        金额:<input type="text" name="money"><br>
+        <input type="submit" value="提交信息">
+    </form>
+
+<!--    <form id="/save" th:action="@{/login}" th:object="${user}">-->
+<!--        <input type="text" value="${param.id}" th:field="*{username}" readonly>-->
+<!--        <input type="text" value="" th:field="*{sex}">-->
+<!--        <input type="text" value="<fmt:formatDate value="${birthday} th:field="*{birthday}">-->
+<!--        <input type="text" value="" th:field="*{address}">-->
+<!--        <input type="submit" value="提交">-->
+<!--    </form>-->
+
+
+</body>
+</html>

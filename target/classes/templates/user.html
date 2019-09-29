@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>查找所有</title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>用户名</th>
+        <th>生日</th>
+        <th>性别</th>
+        <th>地址</th>
+        <th>余额</th>
+    </tr>
+    </thead>
+    <tbody >
+    <tr th:each="user : ${user}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.username}">aaa</td>
+        <td th:text="${#dates.format(user.birthday, 'dd-MM-yyyy')}"></td>
+        <td th:text="${user.sex}"></td>
+        <td th:text="${user.address}"></td>
+        <td th:text="${user.money}"></td>
+        <td>
+            <a th:href="@{/edt(id=${user.id})}">修改</a>
+            <a th:href="@{/del(id=${user.id})}">删除</a>
+        </td>
+    </tr>
+    </tbody>
+</table><br>
+<a href="save.html">添加用户</a>
+
+</body>
+</html>
